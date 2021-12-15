@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.0" />
+    <PackageReference Include="Scrutor" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScalaWay.Data.Abstractions\ScalaWay.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\ScalaWay.Domain.Abstractions\ScalaWay.Domain.Abstractions.csproj" />
+    <ProjectReference Include="..\ScalaWay.Specification.EntityFrameworkCore\ScalaWay.Specification.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>
