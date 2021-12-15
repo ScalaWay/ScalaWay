@@ -54,6 +54,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScalaWay.Data.Abstractions"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScalaWay.EntityFrameworkCore", "ScalaWay.EntityFrameworkCore\ScalaWay.EntityFrameworkCore.csproj", "{069E952A-4DF3-44D4-9302-A3CFEF89F345}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScalaWay.Localization", "ScalaWay.Localization\ScalaWay.Localization.csproj", "{EF5DBBF1-FDC7-488C-A358-298CE9599D52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +118,10 @@ Global
 		{069E952A-4DF3-44D4-9302-A3CFEF89F345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{069E952A-4DF3-44D4-9302-A3CFEF89F345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{069E952A-4DF3-44D4-9302-A3CFEF89F345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5DBBF1-FDC7-488C-A358-298CE9599D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5DBBF1-FDC7-488C-A358-298CE9599D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5DBBF1-FDC7-488C-A358-298CE9599D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5DBBF1-FDC7-488C-A358-298CE9599D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +147,7 @@ Global
 		{090EB743-370A-41D3-B942-2202F87BF4F2} = {32922D8B-2B48-4677-8223-57CC40BFC665}
 		{E5CDBC80-D52B-410B-9595-FEBE2116171B} = {AD94BFBC-CDF8-4818-B6DF-77EF6528980B}
 		{069E952A-4DF3-44D4-9302-A3CFEF89F345} = {AD94BFBC-CDF8-4818-B6DF-77EF6528980B}
+		{EF5DBBF1-FDC7-488C-A358-298CE9599D52} = {12A374A6-EB96-431B-8474-1C70B2D175A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {216C2CC1-A40C-4FA0-91E5-807ADC659812}
