@@ -1,22 +1,18 @@
 ﻿namespace Lucius.Data.Abstractions.Uow
 {
-    public interface IUnitOfWork : IDisposable
+
+    public interface IUnitOfWork: IDisposable
     {
-        Task<ITransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 
-        Task CommitAsync();
-
-        Task RollbackAsync();
     }
 
-    public interface IUnitOfWork<TDbContext, TTransaction> : IDisposable
+    public interface IUnitOfWork<out TDbContext> : IUnitOfWork
+        where TDbContext : class
     {
-        TDbContext DbContext { get; set; }
+        TDbContext DbContext { get;  }
 
-        Task<TTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
+        Task<TTransaction> BeginTransactionAsync<TTransaction>(CancellationToken cancellationToken = default);
 
-        Task CommitAsync();
-
-        Task RollbackAsync();
     }
 }
