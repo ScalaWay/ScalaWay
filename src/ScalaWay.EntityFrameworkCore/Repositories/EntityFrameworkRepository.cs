@@ -16,7 +16,6 @@ namespace ScalaWay.EntityFrameworkCore.Repositories
 
         #region Read Methods
 
-
         public virtual async Task<TAggregateRoot> GetByIdAsync<TKey>(TKey id, CancellationToken cancellationToken = default) where TKey : notnull
         {
             return await dbContext

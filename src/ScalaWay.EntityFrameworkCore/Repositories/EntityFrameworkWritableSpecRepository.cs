@@ -13,17 +13,16 @@ namespace ScalaWay.EntityFrameworkCore.Repositories
 
         #region Create Methods
 
-        public virtual async Task<TAggregateRoot> AddAsync(TAggregateRoot entity, CancellationToken cancellationToken = default)
+        public virtual async Task AddAsync(TAggregateRoot entity, CancellationToken cancellationToken = default)
         {
             dbContext.Set<TAggregateRoot>().Add(entity);
             await SaveChangesAsync(cancellationToken);
-            return entity;
         }
 
-        public virtual Task<TAggregateRoot> AddRangeAsync(IEnumerable<TAggregateRoot> entities, CancellationToken cancellationToken = default)
+        public virtual async Task AddRangeAsync(IEnumerable<TAggregateRoot> entities, CancellationToken cancellationToken = default)
         {
-            // todo
-            throw new NotImplementedException();
+            await dbContext.AddRangeAsync(entities);
+            await SaveChangesAsync(cancellationToken);
         }
 
         #endregion Create Methods
@@ -36,10 +35,10 @@ namespace ScalaWay.EntityFrameworkCore.Repositories
             await SaveChangesAsync(cancellationToken);
         }
 
-        public Task UpdateRangeAsync(IEnumerable<TAggregateRoot> entities, CancellationToken cancellationToken = default)
+        public virtual async Task UpdateRangeAsync(IEnumerable<TAggregateRoot> entities, CancellationToken cancellationToken = default)
         {
-            // todo
-            throw new NotImplementedException();
+            dbContext.UpdateRange(entities);
+            await SaveChangesAsync(cancellationToken);
         }
 
         #endregion Update Methods

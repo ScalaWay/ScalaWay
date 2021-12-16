@@ -16,6 +16,7 @@
     <ProjectReference Include="..\ScalaWay.Data.Abstractions\ScalaWay.Data.Abstractions.csproj" />
     <ProjectReference Include="..\ScalaWay.Domain.Abstractions\ScalaWay.Domain.Abstractions.csproj" />
     <ProjectReference Include="..\ScalaWay.Specification.EntityFrameworkCore\ScalaWay.Specification.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\ScalaWay.Utils\ScalaWay.Utils.csproj" />
   </ItemGroup>
 
 </Project>
