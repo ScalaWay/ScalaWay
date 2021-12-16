@@ -2,7 +2,7 @@
 
 namespace ScalaWay.Domain.Abstractions.Repositories
 {
-    public interface IWritableRepository<TEntity>
+    public interface IWritableRepository<in TEntity>
         where TEntity : class, IAggregateRoot
     {
         /// <summary>
@@ -13,7 +13,7 @@ namespace ScalaWay.Domain.Abstractions.Repositories
         /// A task that represents the asynchronous operation.
         /// The task result contains the <typeparamref name="T" />.
         /// </returns>
-        Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default);
+        Task AddAsync(TEntity entity, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Add a set of entities in the database.
@@ -21,7 +21,7 @@ namespace ScalaWay.Domain.Abstractions.Repositories
         /// <param name="entities"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<TEntity> AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
+        Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Updates an entity in the database

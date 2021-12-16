@@ -11,7 +11,7 @@
         /// A task that represents the asynchronous operation.
         /// The task result contains the <typeparamref name="T" />.
         /// </returns>
-        Task<T> AddAsync(T entity, CancellationToken cancellationToken = default);
+        Task AddAsync(T entity, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Updates an entity in the database
